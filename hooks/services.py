@@ -14,16 +14,19 @@ def manage():
             'provided_data': [
                 # context managers for provided relations
                 # e.g.: helpers.HttpRelation()
+                helpers.HttpRelation()
             ],
             'required_data': [
                 # data (contexts) required to start the service
                 # e.g.: helpers.RequiredConfig('domain', 'auth_key'),
                 #       helpers.MysqlRelation(),
+                helpers.RelationContext('zookeeper', ['private-address','port'])
             ],
             'data_ready': [
                 helpers.render_template(
                     source='upstart.conf',
                     target='/etc/init/solr'),
+                actions.configure_solr,
                 actions.log_start,
             ],
         },

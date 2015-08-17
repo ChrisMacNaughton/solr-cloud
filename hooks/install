@@ -13,8 +13,12 @@ def install():
     #       fetch.apt_install(fetch.filter_installed_packages(['nginx']))
 
     # https://archive.apache.org/dist/lucene/solr/4.10.4/solr-4.10.4.tgz
-    # fetch.apt_install(fetch.filter_installed_packages(['']))
 
+    packages = [ 'ntp',
+                 'openjdk-7-jdk',
+                 'supervisor'
+               ]
+    fetch.apt_install(fetch.filter_installed_packages(packages))
 
 if __name__ == "__main__":
     install()
