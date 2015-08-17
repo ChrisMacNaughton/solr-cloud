@@ -1,0 +1,21 @@
+options:
+  solr-version:
+    type: string
+    default: '5.2.1'
+    description: Which version of Solr to install
+  zookeeper_quorum:
+    type: string
+    description: 'The Zookeeper Quirum to connect to'
+  string-option:
+    type: string
+    default: "Default Value"
+    description: "A short description of the configuration option"
+  boolean-option:
+    type: boolean
+    default: False
+    description: "A short description of the configuration option"
+  int-option:
+    type: int
+    default: 9001
+    description: "A short description of the configuration option"
+

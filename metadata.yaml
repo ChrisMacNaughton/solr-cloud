@@ -1,0 +1,19 @@
+name: solr
+summary: Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene™.
+maintainer: Chris MacNaughton <Chris.MacNaughton@chris-macbook.cmacinfo.com>
+description: |
+  Solr is highly reliable, scalable and fault tolerant, providing distributed indexing, replication and load-balanced querying, automated failover and recovery, centralized configuration and more. Solr powers the search and navigation features of many of the world's largest internet sites.
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://juju.ubuntu.com/docs/authors-charm-metadata.html#charm-metadata
+  - misc
+subordinate: false
+provides:
+  provides-relation:
+    interface: interface-name
+requires:
+  requires-relation:
+    interface: interface-name
+peers:
+  peer-relation:
+    interface: interface-name
