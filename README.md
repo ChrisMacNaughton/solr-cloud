@@ -9,8 +9,7 @@ Step by step instructions on using the charm:
 
 and so on. If you're providing a web service or something that the end user needs to go to, tell them here, especially if you're deploying a service that might listen to a non-default port.
 
-You can then browse to http://ip-address to configure the service.
-
+You can then browse to http://ip-address:8983 to configure the service.
 
 If the charm has any recommendations for running at scale, outline them in examples here. For example if you have a memcached relation that improves performance, mention it here.
 
@@ -21,9 +20,11 @@ This not only helps users but gives people a place to start if they want to help
 
 
 solr-version:
-    The version of Apache Solr to install
-    *Default:*: 5.2.1
+  The version of Apache Solr to install
+  *Default:*: 5.2.1
 
+schema:
+  The schema to install
 # Contact Information
 
 Though this will be listed in the charm store itself don't assume a user will know that, so include that information here:

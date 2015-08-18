@@ -23,9 +23,6 @@ def manage():
                 helpers.RelationContext('zookeeper', ['private-address','port'])
             ],
             'data_ready': [
-                helpers.render_template(
-                    source='upstart.conf',
-                    target='/etc/init/solr'),
                 actions.configure_solr,
                 actions.log_start,
             ],
