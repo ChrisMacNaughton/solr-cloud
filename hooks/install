@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+import setup
+setup.pre_install()
+
+from charmhelpers.core import hookenv
+from charmhelpers import fetch
+
+def install():
+    config = hookenv.config()
+    packages = [ 'ntp',
+                 'openjdk-7-jdk',
+                 'supervisor'
+               ]
+    hookenv.log('Installing solr dependencies')
+    fetch.apt_install(fetch.filter_installed_packages(packages))
+
+    hookenv.log('Installing solr')
+    fetch.download(
+        "https://archive.apache.org/dist/lucene/solr/{0}/solr-{0}.tgz".format(config['solr-version']),
+        '/tmp/solr.tgz'
+    )
+
+if __name__ == "__main__":
+    install()
