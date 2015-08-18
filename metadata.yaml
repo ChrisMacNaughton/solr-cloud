@@ -1,4 +1,4 @@
-name: solr
+name: solr-cloud
 summary: Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene™.
 maintainer: Chris MacNaughton <Chris.MacNaughton@chris-macbook.cmacinfo.com>
 description: |
